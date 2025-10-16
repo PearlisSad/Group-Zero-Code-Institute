@@ -5,9 +5,11 @@
 # ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 
-## Dataset Content
-* Describe your dataset. Choose a dataset of reasonable size to avoid exceeding the repository's maximum size of 100Gb.
+## Project Overview
+* This project is about checking whether passwords meet basic security rules. The business requirements include the checking of all passwords to ensure that they meet the condition of 8 characters or including numbers. This will enable the business to protect its data and mitigate against cyberattacks, ensures that it is compliant with legislative considerations such as the Data Protection Act and reduce risks associated with data breaches. This project will provide a step-by-step approach on how to follow a clear set of rules to ensure personal and professional safety.
 
+## Dataset Content
+* The project has access to three passwords [""hello123"", ""cat"", ""secure2024"", ""password""]. It will involve problems solving techniques and employ python coding rules to develop a list of passwords that meet the business requirements. The goal is to develop a set of rules for application for all new users, those that have forgotten their passwords and those that are required to update their passwords after a set period. 
 
 ## Business Requirements
 * Describe your business requirements
@@ -50,6 +52,14 @@
 * What new skills or tools do you plan to learn next based on your project experience? 
 
 ## Deployment
+ï»¿"passwords = [""hello123"", ""cat"", ""secure2024"", ""password""]  accepted = [ ] not_accepted =[ ]  for x in passwords:     if not len(x) < 8:         if (any(char.isdigit() for char in x)):             accepted.append(x)         else:             not_accepted.append(x)     else:         not_accepted.append(x)          print(f""{accepted} accepted passwords"") print(f""{not_accepted} not accepted passwords"")"
+
+"passwords = [""hello123"", ""cat"", ""secure2024"", ""password""]  def password_leng(password):     return len(password) >= 8  def password_has_number(password):     return any(char.isdigit() for char in password)  result = {}  for password in passwords:     result[password] = {         ""length_ok"": password_leng(password),         ""has_number"": password_has_number(password)     }  print(result)     "
+
+"passwords = [""hello123"", ""cat"", ""secure2024"", ""password""]  pass_pass = [] pass_fail=[] for password in passwords:         if len(password) >= 8:                  pass_pass.append(password)          else:                  pass_fail.append(password)  print(pass_pass)   or   passwords = [""hello123"", ""cat"", ""secure2024"", ""password""]  pass_check = {}   for password in passwords:   if len(password) >= 8:                  pass_check.append(password:True)          else:                  pass_check.append(password:False)   print (pass_check(""hello123""))"
+
+ï»¿"passwords = [""hello123"", ""cat"", ""secure2024"", ""password""]   â€ƒdef password_check(password): â€ƒâ€ƒif password.lengh()>=8: â€ƒâ€ƒâ€ƒreturn: True â€ƒâ€ƒâ€ƒelse: False    password_check(passwords[1])  password_check(passwords[2])"
+
 ### Heroku
 
 * The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
@@ -79,10 +89,17 @@
 - Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
 - The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
 
-### Media
+### Acknwowledgements
 
-- The photos used on the home and sign-up page are from This Open-Source site
-- The images used for the gallery page were taken from this other open-source site
+- Ace
+- Baba Tunde
+- Raphael Magria
+- Vish Pai
+- Volodymr
+- Unmik
+- Anisa
+- Jasbinder
+
 
 
 
