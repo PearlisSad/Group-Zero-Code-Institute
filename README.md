@@ -39,11 +39,15 @@ Milestone Project for Predictive Analytics Specialisation at Code Institute: Pre
 ## Analysis techniques used
 
 Predictive Analytics Specialisation: Predicting Password Security.
+- **Iteration and Condition Checking:** Loops through each password and validates conditions.  
+- **Functional Approach:** Uses small, reusable functions for clarity and testing.  
+- **Python Built-ins:** Utilizes `any()`, `isdigit()`, and `len()` to simplify logic.  
 
-* List the data analysis methods used and explain limitations or alternative approaches.
-* How did you structure the data analysis techniques. Justify your response.
-* Did the data limit you, and did you use an alternative approach to meet these challenges?
-* How did you use generative AI tools to help with ideation, design thinking and code optimisation?
+### Limitations
+The current version does not check for uppercase, lowercase, or special characters — future iterations may include these.
+
+Generative AI  was used to explore ideas around risk to businesses and password implementation. We also looked at legistlation and data protection (GDPR) regarding password protection. 
+During the password-validation project, we used generative-AI tools to brainstorm secure and user-friendly design options. In the ideation phase, we prompted AI to propose multiple validation strategies and evaluate their pros and cons.
 
 ## Ethical considerations
 * Were there any data privacy, bias or fairness issues with the data?
