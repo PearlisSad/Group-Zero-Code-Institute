@@ -5,27 +5,41 @@
 # ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 ## Project Overview
-* This project is about checking whether passwords meet basic security rules. The business requirements include the checking of all passwords to ensure that they meet the condition of 8 characters or including numbers. This will enable the business to protect its data and mitigate against cyberattacks, ensures that it is compliant with legislative considerations such as the Data Protection Act and reduce risks associated with data breaches. This project will provide a step-by-step approach on how to follow a clear set of rules to ensure personal and professional safety.
+* This project is about checking whether passwords meet basic security rules. This will enable the business to protect its data and mitigate against cyberattacks, ensures that it is compliant with legislative considerations such as the Data Protection Act and reduce risks associated with data breaches. This project will provide a step-by-step approach on how to follow a clear set of rules to ensure personal and professional safety.
 * Milestone Project for Predictive Analytics Specialisation at Code Institute: Predicting Password Security
+* Scenario:
 
-## Dataset Content
-* The project has access to three passwords [""hello123"", ""cat"", ""secure2024"", ""password""]. It will involve problems solving techniques and employ python coding rules to develop a list of passwords that meet the business requirements. The goal is to develop a set of rules for application for all new users, those that have forgotten their passwords and those that are required to update their passwords after a set period. 
+Password Requirements Scenario:  
+Check if passwords meet basic security rules (minimum 8 characters, contains numbers).    
+Data:  passwords = ["hello123", "cat", "secure2024", "password"]   
+Tasks:  
+a) Check each password's length. 
+b) Create a list of passwords that are 8 or more characters long. 
+c) come up with your own rules - no restrictions - think like your own application you are developing  
 
-## Business Requirements
-* Describe your business requirements
+## Password Requirements
+* The business requirements include the checking of all passwords to ensure that they meet the condition of 8 characters or including numbers.
 
 ## Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision validating it (them) 
+* Passwords that are 8 characters or longer and contain numbers are stronger and more secure.
+
+Validation:
+Run the Python script to test each password.
+Passwords meeting both criteria are collected in a list of accepted passwords.
 
 ## Project Plan
-* Outline the high-level steps taken for the analysis.
-* How was the data managed throughout the collection, processing, analysis and interpretation steps?
-* Why did you choose the research methodologies you used?
+Milestone Project for Predictive Analytics Specialisation at Code Institute: Predicting Password Security.
 
-## The rationale to map the business requirements to the Data Visualisations
-* List your business requirements and a rationale to map them to the Data Visualisations
+1. **Collect Data:** Create a small list of example passwords.  
+2. **Define Rules:** Implement two functions — one for length, one for number presence.  
+3. **Evaluate Passwords:** Loop through all passwords, apply both checks.  
+4. **Store Results:** Append successful passwords to a new list.  
+5. **Print Results:** Display which passwords passed validation.
 
 ## Analysis techniques used
+
+Predictive Analytics Specialisation: Predicting Password Security.
+
 * List the data analysis methods used and explain limitations or alternative approaches.
 * How did you structure the data analysis techniques. Justify your response.
 * Did the data limit you, and did you use an alternative approach to meet these challenges?
