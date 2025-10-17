@@ -1,0 +1,58 @@
+# Version 1
+
+passwords = ["hello123", "cat", "secure2024", "password"]
+#function to check the lenght is 8 or more ch
+def password_leng(password):
+    return len(password) >= 8
+
+#function to check if has number
+def password_has_number(password):
+    return any(char.isdigit() for char in password)
+
+#the list of passwords that passed checks
+passwords_passed_checks = []
+
+for password in passwords:
+    if password_leng(password) and password_has_number(password):   
+        passwords_passed_checks.append(password)
+
+print(passwords_passed_checks)
+
+
+# Version 2 using OOP: checks lenght 8 and >, if has number, if has upppercase ch, if has special symbol
+class PasswordChecker:
+    def __init__(self, password):
+        self.password = password
+
+    def has_min_length(self, length=8):
+        return len(self.password) >= length
+
+    def has_number(self):
+        return any(char.isdigit() for char in self.password)
+
+    def has_uppercase(self):
+        return any(char.isupper() for char in self.password)
+
+    def has_special_char(self, special_chars="!@#$%^&*()_+-=[]{};:'\",.<>?/\\|"):
+        return any(char in special_chars for char in self.password)
+        
+    @property
+    def is_valid(self):
+        return (
+            self.has_min_length() and
+            self.has_number() and
+            self.has_uppercase() and
+            self.has_special_char()
+        )
+
+
+#Example usage
+passwords = ["hello123", "cat", "secure2024", "password", "HElo1234@@"]
+
+valid_passwords = []
+
+for pw in passwords:
+    if PasswordChecker(pw).is_valid:
+        valid_passwords.append(pw)
+
+print(valid_passwords)
