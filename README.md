@@ -20,8 +20,10 @@ c) come up with your own rules - no restrictions - think like your own applicati
 ## Password Requirements
 * The business requirements include the checking of all passwords to ensure that they meet the condition of 8 characters or including numbers.
 
-## Hypothesis and how to validate?
-* Passwords that are 8 characters or longer and contain numbers are stronger and more secure.
+## Hypothesis and how to validate
+
+* Hypothesis: Most user-created passwords fail to meet minimal length and numeric requirements.
+* Validation: Run the program and compare how many passwords pass or fail the checks.
 
 Validation:
 Run the Python script to test each password.
@@ -30,11 +32,20 @@ Passwords meeting both criteria are collected in a list of accepted passwords.
 ## Project Plan
 Milestone Project for Predictive Analytics Specialisation at Code Institute: Predicting Password Security.
 
-1. **Collect Data:** Create a small list of example passwords.  
-2. **Define Rules:** Implement two functions — one for length, one for number presence.  
-3. **Evaluate Passwords:** Loop through all passwords, apply both checks.  
-4. **Store Results:** Append successful passwords to a new list.  
-5. **Print Results:** Display which passwords passed validation.
+1. **Collect Data:** Create a small list of example passwords.
+   We used the following passwords to test our program:
+   (Enter the passwords).
+3. **Define Rules:** Implement two functions — one for length, one for number presence.
+   We use the Python length function to check the password length.
+   We are going to check the passsword if it contains a number or a numerial number within the 8 character length limit. 
+   (Show the command from python - decide whether to include or not.) 
+5. **Evaluate Passwords:** Loop through all passwords, apply both checks.
+   We loop through the password list and checked the above Two conditions - length and number.
+   We used the list data structure to store password list.
+7. **Store Results:** Append successful passwords to a new list.
+   The passwords which satisfy the above requirement are added to a new list which can be printed out. 
+9. **Print Results:** Display which passwords passed validation.
+   Passwords that have met all the conditions will be printed out.
 
 ## Analysis techniques used
 
@@ -50,23 +61,11 @@ Generative AI  was used to explore ideas around risk to businesses and password 
 During the password-validation project, we used generative-AI tools to brainstorm secure and user-friendly design options. In the ideation phase, we prompted AI to propose multiple validation strategies and evaluate their pros and cons.
 
 ## Ethical considerations
-* Were there any data privacy, bias or fairness issues with the data?
-* How did you overcome any legal or societal issues?
-
-## Dashboard Design
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
-* Later, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but subsequently you used another plot type).
-* How were data insights communicated to technical and non-technical audiences?
-* Explain how the dashboard was designed to communicate complex data insights to different audiences. 
-
-## Unfixed Bugs
-* Please mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.
-* Did you recognise gaps in your knowledge, and how did you address them?
-* If applicable, include evidence of feedback received (from peers or instructors) and how it improved your approach or understanding.
+* No real user data was used. The passwords are purely synthetic examples to avoid privacy issues.
 
 ## Development Roadmap
-* What challenges did you face, and what strategies were used to overcome these challenges?
-* What new skills or tools do you plan to learn next based on your project experience? 
+* Add integration with user input for live password validation.
+* Incorporate regex for advanced password strength scoring.
 
 ## Deployment
 ï»¿"passwords = [""hello123"", ""cat"", ""secure2024"", ""password""]  accepted = [ ] not_accepted =[ ]  for x in passwords:     if not len(x) < 8:         if (any(char.isdigit() for char in x)):             accepted.append(x)         else:             not_accepted.append(x)     else:         not_accepted.append(x)          print(f""{accepted} accepted passwords"") print(f""{not_accepted} not accepted passwords"")"
@@ -77,48 +76,13 @@ During the password-validation project, we used generative-AI tools to brainstor
 
 ï»¿"passwords = [""hello123"", ""cat"", ""secure2024"", ""password""]   â€ƒdef password_check(password): â€ƒâ€ƒif password.lengh()>=8: â€ƒâ€ƒâ€ƒreturn: True â€ƒâ€ƒâ€ƒelse: False    password_check(passwords[1])  password_check(passwords[2])"
 
-### Heroku
-
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
-* Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
-* The project was deployed to Heroku using the following steps.
-
-1. Log in to Heroku and create an App
-2. From the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
-6. If the slug size is too large then add large files not required for the app to the .slugignore file.
-
-
-## Main Data Analysis Libraries
-* Here you should list the libraries you used in the project and provide an example(s) of how you used these libraries.
-
-
-## Credits 
-
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
-
-### Content 
-
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-
 ### Acknwowledgements
 
 - Ace
-- Baba Tunde
-- Raphael Magria
-- Vish Pai
+- Baba
+- Raphael
+- Vish
 - Volodymr
-- Unmik
+- Unniki
 - Anisa
 - Jasbinder
-
-
-
-
-## Acknowledgements (optional)
-* Thank the people who provided support through this project.
